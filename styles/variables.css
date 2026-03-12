@@ -4,4 +4,12 @@
     --main-font: 'Inter', sans-serif;
     --card-text-weight: 400;
     --card-title-weight: 700;
+
+    --header-width: clamp(375px, 50vw, 700px);
+    --header-height: clamp(327px, 50vh, 368px);
+    --header-padding-left-and-right: clamp(14px, calc(14px + 10vw), 120.5px);
+    --header-padding-top-and-bottom: clamp(120px, calc(120px + 0.75vh), 128px);
+
+    --main-color: #000;
+    --bacground-color: #fff;
 }

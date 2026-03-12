@@ -17,3 +17,38 @@
   font-weight: var(--card-text-weight);
   font-variation-settings: 'wght' var(--card-text-weight);
 }
+
+.header {
+  width: var(--header-width);
+  height: var(--header-height);
+  margin: 0 auto;
+  background-color: aqua; /*Заменить на var(--bacground-color)*/
+  border: 2px solid var(--main-color);
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: var(--header-padding-left-and-right) var(--header-padding-top-and-bottom);
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.header__title {
+  font-size: clamp(49px, calc(49px + 1.5vw), 65px);
+}
+
+.header__subtitle {
+  font-size: clamp(14px, calc(14px + 0.85vw), 23px);
+}
+
+@media (width <= 768px) {
+  :root {
+    --header-width: 100%;
+  }
+}
