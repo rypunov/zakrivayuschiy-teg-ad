@@ -5,11 +5,18 @@
     --card-text-weight: 400;
     --card-title-weight: 700;
 
-    --header-width: clamp(375px, 50vw, 700px);
-    --header-height: clamp(327px, 50vh, 368px);
+    --header-width: clamp(375px, calc(375px + 30.5vw), 700px);
+    --header-height: clamp(327px, calc(375px + 30.5vw), 368px);
     --header-padding-left-and-right: clamp(14px, calc(14px + 10vw), 120.5px);
     --header-padding-top-and-bottom: clamp(120px, calc(120px + 0.75vh), 128px);
 
+    --card-width: clamp(375px, calc(375px + 30.5vw), 700px); /*В макете до 696px, но там вылазит обводка наружу. Не забыть про этот момент!*/
+    --card-height: clamp(760px, calc(760px + 18.5vw), 959px);
+
+    --card-font-size: 18px;
+    
     --main-color: #000;
     --bacground-color: #fff;
+
+    /*Добавить border*/
 }
