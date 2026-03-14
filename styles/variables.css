@@ -11,13 +11,12 @@
     --header-padding-top-and-bottom: clamp(120px, calc(120px + 8 * (100vh - 667px) / 293), 128px);
 
     --card-width: clamp(375px, calc(375px + 30.5vw), 700px); /*В макете до 696px, но там вылазит обводка наружу. Не забыть про этот момент!*/
-    --card-height: clamp(760px, calc(760px + 18.5vw), 959px); /*Убрать*/
 
     --card-font-size: 18px;
     
     --main-color: #000;
     --bacground-color: #fff;
-    --label-stroke-color: #fff;
+    --label-stroke-color: #000; /*Заменил на черный, чтобы не сливалось*/
 
     /*Добавить border*/
 }

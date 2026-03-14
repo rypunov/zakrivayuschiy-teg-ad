@@ -56,7 +56,6 @@
 
 .card {
   width: var(--card-width);
-  /* height: var(--card-height); */
   background-color: var(--bacground-color);
 
 }
@@ -75,6 +74,7 @@
 .image__container {
   position: relative;
   width: 100%;
+  border: 2px solid var(--main-color);
 }
 
 .card__image {
@@ -88,9 +88,9 @@
   right: 25px;
   font-family: var(--accent-font);
   font-size: 14px;
-  color: var(--main-color);
+  color: var(--bacground-color);
   mix-blend-mode: hard-light;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   text-shadow: 
     -1px 0 var(--label-stroke-color),
     0 1px var(--label-stroke-color),
