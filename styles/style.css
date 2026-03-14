@@ -72,10 +72,39 @@
   font-variation-settings: 'wght' 700;
 }
 
+.image__container {
+  position: relative;
+  width: 100%;
+}
+
 .card__image {
   width: 100%;
   display: block;
 }
+
+.image__label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  color: var(--main-color);
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  text-shadow: 
+    -1px 0 var(--label-stroke-color),
+    0 1px var(--label-stroke-color),
+    1px 0 var(--label-stroke-color),
+    0 -1px var(--label-stroke-color);
+}
+
+@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+  .image__label {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+  }
+} 
 
 .card__content {
   border: 2px solid var(--main-color);
@@ -152,9 +181,13 @@
     width: 306px;
     height: 84px;
   }
-  
+
   .floppy-icon {
     width: 28px;
     height: 28px;
+  }
+
+  .image__label {
+    right: 13px;
   }
 }
