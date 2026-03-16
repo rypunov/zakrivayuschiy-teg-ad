@@ -35,5 +35,8 @@
             #1a1a1a
         );
 
+    --contour-color: black;
+    --animation-fill-color: red;
+
     /*Добавить border*/
 }
