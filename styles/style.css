@@ -41,12 +41,11 @@
 
 .header {
   width: var(--header-width);
-  /* height: var(--header-height); */
   margin: 0 auto;
   background-color: var(--background-color);
-  border: 2px solid var(--main-color);
-  margin-top: 100px;
-  margin-bottom: 100px;
+  border: var(--border);
+  margin-top: 104px;
+  margin-bottom: 103px;
   padding: var(--header-padding-top-and-bottom) var(--header-padding-left-and-right);
 }
 
@@ -82,7 +81,7 @@
 }
 
 .card__title-container {
-  border: 2px solid var(--main-color);
+  border: var(--border);
   border-bottom: none; /*Так как у картинки уже есть верхняя граница*/
   padding: 3px 10px;
 }
@@ -95,7 +94,7 @@
 .image__container {
   position: relative;
   width: 100%;
-  border: 2px solid var(--main-color);
+  border: var(--border);
 }
 
 .card__image {
@@ -143,7 +142,7 @@
   font-size: 14px;
   color: var(--background-color);
   mix-blend-mode: hard-light;
-  /* opacity: 0.5; */
+  opacity: 0.5;
   text-shadow: 
     -1px 0 var(--label-stroke-color),
     0 1px var(--label-stroke-color),
@@ -160,7 +159,7 @@
 } 
 
 .card__content {
-  border: 2px solid var(--main-color);
+  border: var(--border);
   border-top: none; /*Так как у картинки уже есть нижняя граница*/
   padding: 25px;
 }
@@ -202,7 +201,7 @@
   width: 130px;
   height: 38px;
   background-color: transparent;
-  border: 2px solid var(--main-color);
+  border: var(--border);
 }
 
 .button__text {
@@ -218,7 +217,7 @@
   width: 335px;
   height: 55px;
   background-color: var(--background-color);
-  border: 2px solid var(--main-color);
+  border: var(--border);
   margin-bottom: 105px;
 }
 
@@ -240,7 +239,7 @@
   font-family: var(--accent-font);
   font-size: 14px;
   color: var(--main-color);
-  border: 2px solid var(--main-color);
+  border: var(--border);
 }
 
 .dialog__content {
@@ -262,7 +261,7 @@
 
 .dialog__button-close {
   background-color: transparent;
-  border: 2px solid var(--main-color);
+  border: var(--border);
   padding-top: 10.9px;
   padding-bottom: 10.9px;
   line-height: 90%;
@@ -433,5 +432,15 @@
   #dialog-id[open] {
     width: 341px;
     padding: 30px 40px; /*Чуть меньше, чем на Figma, чтобы текст не переносился.*/
+  }
+}
+
+/* В целом бесполезное правило, но теперь совпадает с макетом.
+Почему-то при ширине экрана 375 отступы хедера не срабатывали для медиа запроса width <= 375px.
+Поэтому увеличиваем на единицу */
+@media (width <= 376px) {
+  .header {
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 }

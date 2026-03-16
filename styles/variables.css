@@ -6,18 +6,16 @@
     --card-title-weight: 700;
 
     --header-width: clamp(375px, calc(375px + (700 - 375) * (100vw - 375px) / (1440 - 375)), 700px);
-    --header-height: clamp(327px, calc(375px + 30.5vw), 368px); /*Убрать*/
     --header-padding-left-and-right: clamp(14px, calc(14px + 106.5 * (100vw - 375px) / 1065), 120.5px);
     --header-padding-top-and-bottom: clamp(120px, calc(120px + 8 * (100vh - 667px) / 293), 128px);
-
     --card-width: clamp(375px, calc(375px + (700 - 375) * (100vw - 375px) / (1440 - 375)), 700px);
 
     --card-font-size: 18px;
-    
     --main-color: #000;
     --background-color: #fff;
     --label-stroke-color: #000; /*Заменил на черный, чтобы не сливалось*/
     --button-text-color: var(--background-color);
+    --border: 2px solid var(--main-color);
 
     --background-image: 
         repeating-linear-gradient(
@@ -37,6 +35,4 @@
 
     --contour-color: black;
     --animation-fill-color: red;
-
-    /*Добавить border*/
 }
